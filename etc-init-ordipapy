@@ -1,0 +1,3 @@
+#!/bin/sh
+/home/pi/a.out
+python /home/pi/3151375/adafruit_mcp3008.py
