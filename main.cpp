@@ -91,6 +91,7 @@ public:
         m_media = libvlc_media_new_location(m_instance, m_mediaUrl.c_str());
         m_mediaPlayer = libvlc_media_player_new_from_media(m_media);
         libvlc_media_release(m_media);
+//	std::cout << m_mediaUrl << std::endl;
     }
     
     bool playing() const { return m_playing; }
@@ -244,7 +245,7 @@ protected:
 
 class NextButton : public PushButton {
 public:
-    NextButton(Player* p) : PushButton("18", "17"), player(p) {}
+    NextButton(Player* p) : PushButton("27", "17"), player(p) {}
     
     virtual void pressed() {
         player->next();
@@ -258,7 +259,7 @@ protected:
 
 class PreviousButton : public PushButton {
 public:
-    PreviousButton(Player* p) : PushButton("23", "22"), player(p) {}
+    PreviousButton(Player* p) : PushButton("10", "22"), player(p) {}
     
     virtual void pressed() {
         player->previous();
